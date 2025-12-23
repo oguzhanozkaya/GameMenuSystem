@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --neon-blue: #00f3ff;
+    --neon-pink: #bc13fe;
+    --bg-dark: #0b0c15;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at center, #1a1c29 0%, #000 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-pink);
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--neon-blue);
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+}
+
+.btn:hover {
+    background: var(--neon-blue);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-blue);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border-color: #666;
+    color: #aaa;
+    font-size: 0.9rem;
+    width: 50%;
+}
+
+.btn-secondary:hover {
+    background: #333;
+    color: #fff;
+    box-shadow: none;
+}
+
+.card {
+    background: var(--glass-bg);
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: rgba(0,0,0,0.3);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    color: var(--neon-pink);
+    font-family: 'Orbitron', sans-serif;
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+select, input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #444;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background: var(--neon-pink);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 0 15px var(--neon-pink);
+}
