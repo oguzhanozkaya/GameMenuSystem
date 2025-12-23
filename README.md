@@ -49,7 +49,7 @@ Database connection must be configured with local MySQL credentials.
 2.  Update the `password` field (and `user` if different from 'root'):
 
 ```javascript
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',      // Update if necessary
     password: 'root', // Update if necessary
@@ -61,9 +61,9 @@ const connection = mysql.createConnection({
 
 ### 1. Start the Server
 ```bash
-node server.js
+node gamemenu.js
 ```
-You should see the message: \`Game Menu Server running on http://localhost:3000\`
+You should see the message: `Game Menu Server running on http://localhost:3000`
 
 ### 2. Open in Browser
 Navigate to [http://localhost:3000](http://localhost:3000).
