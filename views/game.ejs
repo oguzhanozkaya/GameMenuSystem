@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mission Active</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background: #333;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .loading-bar::after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            height: 100%;
+            width: 50%;
+            background: var(--neon-pink);
+            animation: load 2s infinite ease-in-out;
+        }
+        @keyframes load { 0% { left: -50%; } 100% { left: 100%; } }
+
+        #mission-report { display: none; border-top: 1px solid #333; margin-top: 20px; padding-top: 20px; }
+        
+        .cyber-input {
+            background: #111; 
+            border: 1px solid var(--neon-blue); 
+            color: #fff; 
+            padding: 10px; 
+            width: 90%; 
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: var(--neon-pink)">MISSION ACTIVE</h1>
+        
+        <div class="card">
+            <div id="game-status">
+                <p style="font-family: monospace; color: var(--neon-blue);">
+                    > CONNECTING TO NEURAL NET...<br>
+                    > SYNCING OBJECTIVES...<br>
+                    > DEPLOYING ASSETS...
+                </p>
+                <div class="loading-bar"></div>
+                
+                <button onclick="finishGame()" class="btn" style="border-color: #0f0; color: #0f0;">
+                    MANUAL OVERRIDE (ENTER SCORE)
+                </button>
+            </div>
+
+            <div id="mission-report">
+                <h2 style="margin-top:0">COMPLETE MISSION</h2>
+                <p style="color: #888; font-size: 0.9rem;">ENTER INFORMATION</p>
+
+                <form action="/save-score" method="POST">
+                    <label>AGENT NAME:</label>
+                    <input type="text" name="player_name" class="cyber-input" required placeholder="Enter Name">
+                    
+                    <label>MISSION SCORE:</label>
+                    <input type="number" name="score" class="cyber-input" required placeholder="Enter Score (e.g. 5000)">
+                    
+                    <button type="submit">FINISH GAME</button>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        <a href="/" class="btn btn-secondary" style="border-color: red; color: red;">ABORT MISSION</a>
+    </div>
+
+    <script>
+        function finishGame() {
+            document.getElementById('game-status').style.display = 'none';
+            document.getElementById('mission-report').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
