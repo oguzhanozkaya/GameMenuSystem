@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= title.toUpperCase() %></h1>
+        
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>AGENT ID</th>
+                        <th>SCORE</th>
+                        <% if(title === 'Recent Activity') { %> <th>TIMESTAMP</th> <% } %>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% scores.forEach(function(player) { %>
+                        <tr>
+                            <td style="color: var(--neon-blue); font-weight: bold;"><%= player.player_name %></td>
+                            <td><%= player.score %> PTS</td>
+                            <% if(title === 'Recent Activity') { %> 
+                                <td style="font-size: 0.8rem; color: #888;">
+                                    <%= new Date(player.created_at).toLocaleTimeString() %>
+                                </td> 
+                            <% } %>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+        <a href="/" class="btn btn-secondary">Return to Main Menu</a>
+    </div>
+</body>
+</html>

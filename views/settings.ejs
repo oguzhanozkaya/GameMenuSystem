@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Configuration</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CONFIGURATION</h1>
+        
+        <form action="/settings" method="POST" class="card" style="text-align: left;">
+            
+            <h3>GAMEPLAY</h3>
+            <label>Difficulty Level</label>
+            <select name="difficulty">
+                <option value="Easy" <%= settings.difficulty == 'Easy' ? 'selected' : '' %>>Easy</option>
+                <option value="Normal" <%= settings.difficulty == 'Normal' ? 'selected' : '' %>>Normal</option>
+                <option value="Hard" <%= settings.difficulty == 'Hard' ? 'selected' : '' %>>Hard</option>
+            </select>
+
+            <h3>AUDIO</h3>
+            <label>Master Output (<%= settings.master_volume %>%)</label>
+            <input type="range" name="master_volume" min="0" max="100" value="<%= settings.master_volume %>">
+
+            <h3>VISUALS</h3>
+            <label>Graphics Quality</label>
+            <select name="graphics_quality">
+                <option value="Low" <%= settings.graphics_quality == 'Low' ? 'selected' : '' %>>Low</option>
+                <option value="Medium" <%= settings.graphics_quality == 'Medium' ? 'selected' : '' %>>Medium</option>
+                <option value="High" <%= settings.graphics_quality == 'High' ? 'selected' : '' %>>High</option>
+                <option value="Ultra" <%= settings.graphics_quality == 'Ultra' ? 'selected' : '' %>>Ultra</option>
+            </select>
+
+            <h3>LOCALIZATION</h3>
+            <label>System Language</label>
+            <select name="language">
+                <option value="English" <%= settings.language == 'English' ? 'selected' : '' %>>English</option>
+                <option value="Spanish" <%= settings.language == 'Spanish' ? 'selected' : '' %>>Spanish</option>
+                <option value="Japanese" <%= settings.language == 'Japanese' ? 'selected' : '' %>>Japanese</option>
+            </select>
+
+            <button type="submit">APPLY CHANGES</button>
+        </form>
+
+        <a href="/" class="btn btn-secondary">Return to Main Menu</a>
+    </div>
+</body>
+</html>
