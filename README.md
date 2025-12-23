@@ -14,7 +14,7 @@ This project is a prototype demonstrating the **Model-View-Controller (MVC)** ar
 ### Architectural Breakdown
 * **Model (`/models`):** Handles all database interactions (SQL queries) for fetching scores and updating settings.
 * **View (`/views`):** Renders the UI using EJS templates. Decoupled from logic.
-* **Controller (`/controllers`):** Processes user input, retrieves data from the Model, and selects the View.
+* **Controller (`/controllers`):** Processes user input, and selects the View.
 
 ---
 
@@ -39,8 +39,8 @@ npm install
 
 ## Database Configuration
 
-1.  Open **MySQL Workbench** or your preferred SQL client.
-2.  Open the file `db.sql` located in this project folder.
+1.  Open **MySQL Workbench** or preferred SQL client.
+2.  Open the file `db.sql` located in project folder.
 3.  Run the entire script to create the database (`game_menu_db`), tables, and seed initial data.
 
 **Important:**
@@ -63,7 +63,7 @@ const db = mysql.createConnection({
 ```bash
 node gamemenu.js
 ```
-You should see the message: `Game Menu Server running on http://localhost:3000`
+Message if everything is true: `Game Menu Server running on http://localhost:3000`
 
 ### 2. Open in Browser
 Navigate to [http://localhost:3000](http://localhost:3000).
