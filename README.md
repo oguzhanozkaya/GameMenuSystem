@@ -2,9 +2,9 @@
 This project is a prototype demonstrating the **Model-View-Controller (MVC)** architectural pattern. It features a sci-fi themed game menu system with settings page, a high-score leaderboard, a lastest scores dashboard, and a simulated game environment.
 
 ## Group Members
-* **Ayşe İrem Göksu**
-* **Emir Can Tokalakoğlu**
-* **Oğuzhan Özkaya**
+* **Ayşe İrem Göksu** (izaig)
+* **Emir Can Tokalakoğlu** (emircantokalak)
+* **Oğuzhan Özkaya** (oguzhanozkaya)
 
 ## Project Overview
 * **Pattern Implemented:** MVC (Model-View-Controller)
@@ -63,7 +63,7 @@ const db = mysql.createConnection({
 ```bash
 node gamemenu.js
 ```
-Message if everything is true: `Game Menu Server running on http://localhost:3000`
+Message if everything is correct: `Game Menu Server running on http://localhost:3000`
 
 ### 2. Open in Browser
 Navigate to [http://localhost:3000](http://localhost:3000).
