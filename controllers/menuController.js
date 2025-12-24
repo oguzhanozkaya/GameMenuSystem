@@ -22,7 +22,7 @@ const MenuController = {
             res.redirect('/leaderboard');
         });
 
-        console.log("New Score created.")
+        console.log("New Score created: %s, %s.", player_name, score)
     },
 
     // Handle the request for the home screen by rendering the main menu index view.
