@@ -1,7 +1,7 @@
 /*
  * SENG 451 - Group 2 - Homework 3
- * Filename    : menuController.css
- * Description : This is the controller component of the project,
+ * Filename    : menuController.js
+ * Description : This is the CONTROLLER component of the project,
  * which acts as the brain of the application,
  * receiving requests from the routes,
  * interacting with the Model for data.
