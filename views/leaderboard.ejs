@@ -15,7 +15,7 @@
                     <tr>
                         <th>AGENT ID</th>
                         <th>SCORE</th>
-                        <% if(title === 'Recent Activity') { %> <th>TIMESTAMP</th> <% } %>
+                        <% if(title === 'Recent Scores') { %> <th>TIME</th> <% } %>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,9 +23,9 @@
                         <tr>
                             <td style="color: var(--neon-blue); font-weight: bold;"><%= player.player_name %></td>
                             <td><%= player.score %> PTS</td>
-                            <% if(title === 'Recent Activity') { %> 
+                            <% if(title === 'Recent Scores') { %> 
                                 <td style="font-size: 0.8rem; color: #888;">
-                                    <%= new Date(player.created_at).toLocaleTimeString() %>
+                                    <%= new Date(player.created_at).toLocaleString() %>
                                 </td> 
                             <% } %>
                         </tr>

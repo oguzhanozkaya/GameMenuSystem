@@ -8,6 +8,8 @@ const MenuController = {
             if (err) throw err;
             res.redirect('/leaderboard');
         });
+
+        console.log("New Score created.")
     },
     getMainMenu: (req, res) => {
         res.render('index');
@@ -27,7 +29,7 @@ const MenuController = {
     getLatestScores: (req, res) => {
         GameModel.getLatestScores((err, results) => {
             if (err) throw err;
-            res.render('leaderboard', { scores: results, title: 'Recent Activity' });
+            res.render('leaderboard', { scores: results, title: 'Recent Scores' });
         });
     },
 
@@ -52,6 +54,8 @@ const MenuController = {
                 });
             });
         });
+
+        console.log("Settings updated.")
     }
 };
 
