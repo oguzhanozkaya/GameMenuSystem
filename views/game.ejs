@@ -66,7 +66,7 @@
                 <h2 style="margin-top:0">COMPLETE MISSION</h2>
                 <p style="color: #888; font-size: 0.9rem;">ENTER INFORMATION</p>
 
-                <form action="/save-score" method="POST">
+                <form action="/save-score" method="POST" onsubmit="return validateGameForm()">
                     <label>AGENT NAME:</label>
                     <input type="text" name="player_name" class="cyber-input" required placeholder="Enter Name">
                     
@@ -82,10 +82,39 @@
         <a href="/" class="btn btn-secondary" style="border-color: red; color: red;">ABORT MISSION</a>
     </div>
 
+    <div id="info-popup" class="info-popup">
+        <div class="info-popup-content">
+            <p id="info-message"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+
     <script>
         function finishGame() {
             document.getElementById('game-status').style.display = 'none';
             document.getElementById('mission-report').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('info-popup').style.display = 'none';
+        }
+
+        function validateGameForm() {
+            const name = document.querySelector('input[name="player_name"]').value.trim();
+            const score = document.querySelector('input[name="score"]').value.trim();
+
+            if (name === "") {
+                showPopup("Agent name cannot be empty.");
+                return false;
+            }
+
+            if (score === "" || isNaN(score) || score.charAt(0) == '-') {
+                showPopup("Mission score must be a valid positive number.");
+                return false;
+            }
+
+            return true;
         }
     </script>
 </body>

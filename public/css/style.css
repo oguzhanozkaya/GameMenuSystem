@@ -146,3 +146,38 @@ button[type="submit"] {
 button[type="submit"]:hover {
     box-shadow: 0 0 15px var(--neon-pink);
 }
+
+
+.info-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-popup-content {
+    background: #111;
+    border: 2px solid var(--neon-pink);
+    padding: 20px 30px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 20px var(--neon-pink);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.info-popup-content p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.info-popup-content button {
+    background: var(--neon-pink);
+    border: none;
+    color: #000;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
