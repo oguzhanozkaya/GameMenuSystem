@@ -1,3 +1,8 @@
+/*
+ *  SENG 451 - Group 2 - Homework 3
+ *  This script creates and initializes the database.
+ */
+
 -- Creates database game_menu_db for the game menu system.
 CREATE DATABASE game_menu_db;
 USE game_menu_db;
@@ -24,7 +29,7 @@ INSERT INTO settings (setting_name, setting_value) VALUES
 ('graphics_quality', 'High'),
 ('language', 'English');
 
--- Inserts initial data to scores table
+-- Inserts initial data to scores table.
 INSERT INTO scores (player_name, score, created_at) VALUES 
 ('Neo', 9999, NOW()),
 ('Trinity', 8500, NOW() - INTERVAL 2 HOUR),
