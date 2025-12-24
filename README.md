@@ -7,6 +7,7 @@ This project is a prototype demonstrating the **Model-View-Controller (MVC)** ar
 * **Oğuzhan Özkaya** (oguzhanozkaya)
 
 ## Project Overview
+* [**Demo**](https://teduedutr-my.sharepoint.com/:v:/g/personal/oguzhan_ozkaya_tedu_edu_tr/IQDvM12EB5WsTr9GznGYe4OWAYH3ybEZFDFb-D-vIe1HcqE?e=CsI8J8)
 * **Pattern Implemented:** MVC (Model-View-Controller)
 * **Scenario:** Game Menu System
 * **Tech Stack:** Node.js (Express), MySQL, EJS Templating
