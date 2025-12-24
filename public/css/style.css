@@ -1,3 +1,9 @@
+/*
+ * SENG 451 - Group 2 - Homework 3
+ * Filename    : style.css
+ * Description : This stylesheet defines the visual identity of the View component in the MVC pattern.
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
 :root {
