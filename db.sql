@@ -1,6 +1,7 @@
 /*
  *  SENG 451 - Group 2 - Homework 3
- *  This script creates and initializes the database.
+ *  Filename    : gamemenu.js
+ *  Description : This script creates and initializes the database.
  */
 
 -- Creates database game_menu_db for the game menu system.
