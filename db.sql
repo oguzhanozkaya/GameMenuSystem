@@ -1,6 +1,6 @@
 /*
  *  SENG 451 - Group 2 - Homework 3
- *  Filename    : gamemenu.js
+ *  Filename    : db.sql
  *  Description : This script creates and initializes the database.
  */
 
